@@ -28,11 +28,13 @@ class LinkedList:
         cur.next = Node(data)           # 마지막 노드에 data 추가
 
     def print_all(self):
-        cur = self.head
-        while cur is not None:
-            print(cur.data)
-            cur = cur.next
+        cur = self.head                 # cur 에 head node 저장
+        while cur is not None:          # cur이 None 이 아닐 때 까지
+            print(cur.data)             
+            cur = cur.next              # 다음번째 node 저장
+            
 linked_list = LinkedList(3)
 linked_list.append(4)
 linked_list.append(5)
+linked_list.append(6)
 linked_list.print_all()
