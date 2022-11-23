@@ -48,8 +48,8 @@ class LinkedList:
             self.head = self.head.next  # head 의 node에 head의 다음번째 node 저장
             return
 
-        node = self.get_node(index-1)
-        node.next = node.next.next
+        node = self.get_node(index-1)   # index 번째 node 를 node에 저장
+        node.next = node.next.next      # node 의 next 를 node의 next.next 값으로 저장
 
 
         
