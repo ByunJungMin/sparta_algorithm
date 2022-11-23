@@ -11,7 +11,7 @@ person_1 = Person("유재석")             # class를 통한 새로운 객체를
 print(person_1.name)
 print(person_1)
 person_1.talk()
-person_2 = Person("박명수")             # () 는 constructor 즉 생성자 이것은 객체를 생성할 때 쓰는 함수
+person_2 = Person("박명수")             # () 는 constructor 즉 생성자. 이것은 객체를 생성할 때 쓰는 함수
 print(person_2.name)
 print(person_2)
 person_2.talk()
