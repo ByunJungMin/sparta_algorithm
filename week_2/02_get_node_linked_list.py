@@ -28,6 +28,7 @@ class LinkedList:
     def get_node(self, index):
         node = self.head
         count = 0
+        
         while count < index:
             node = node.next        # node에 다음번째 node를 저장
             count += 1              # node의 index번째 증가

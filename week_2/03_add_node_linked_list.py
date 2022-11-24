@@ -27,25 +27,25 @@ class LinkedList:
 
     def get_node(self, index):
         node = self.head
-        count = 0
+        count = 0                   # node의 index 번째를 알려주는 변수
 
         while count < index:
             node = node.next        # node에 다음번째 node를 저장
-            count += 1              # node의 index번째 증가
+            count += 1              # node의 index가 1씩 증가
         return node
 
     def add_node(self, index, value):
-        new_node = Node(value)      # new_node에 새로 입력할 Node 저장
+        new_node = Node(value)      # 추가할 Node 저장
 
         if index == 0:              # 만약 0번째 인덱스에 추가를 하려면
-            new_node.next = self.head   # new_node 다음이 헤드 노드라는걸 알기위한 것
+            new_node.next = self.head   # new_node 다음이 기존의 헤드 노드라는걸 알기위한 것
             self.head = new_node    # head node에 new_node 저장
             return
 
         node = self.get_node(index-1) # index 번째 node에 저장하기 위해서 index -1 번째 node 저장
         new_node = Node(value)      # new_node에 새로 입력할 Node 저장
         next_node = node.next       # next_node에 현재 있는 node.next를 저장
-        node.next = new_node        # node에 다음번째에 new_node 저장
+        node.next = new_node        # node의 다음번째에 new_node 저장
         new_node.next = next_node   # 새로운 node의 다음번째에 기존 next_node 저장
         
 
