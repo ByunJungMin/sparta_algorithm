@@ -15,19 +15,19 @@ class LinkedList:
         cur.next = Node(value)
 
 
-    def get_linked_list_sum(linked_list_1, linked_list_2):
-        sum_1 = _get_linked_list_sum(linked_list_1)
-        sum_2 = _get_linked_list_sum(linked_list_2)
+def get_linked_list_sum(linked_list_1, linked_list_2):
+    sum_1 = _get_linked_list_sum(linked_list_1)
+    sum_2 = _get_linked_list_sum(linked_list_2)
 
-        return sum_1 + sum_2
+    return sum_1 + sum_2
 
-    def _get_linked_list_sum(linked_list):
-        sum = 0                                           # linked_list_1 의 합계를 저장하는 변수
-        head = linked_list.head                         # linked_list_1 의 head를 저장하는 변수
-        while head is not None:
-            sum = sum * 10 + head.data
-            head = head.next
-        return sum
+def _get_linked_list_sum(linked_list):
+    sum = 0                                           # linked_list_1 의 합계를 저장하는 변수
+    head = linked_list.head                         # linked_list_1 의 head를 저장하는 변수
+    while head is not None:
+        sum = sum * 10 + head.data
+        head = head.next
+    return sum
 
 linked_list_1 = LinkedList(6)
 linked_list_1.append(7)
