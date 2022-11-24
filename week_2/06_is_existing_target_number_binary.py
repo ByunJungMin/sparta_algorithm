@@ -7,9 +7,12 @@ def is_existing_target_number_binary(target, array):
     current_min = 0                                     # finding_numbers 의 최솟값
     current_max = len(array) - 1                        # finding_numbers 의 최대값
     current_guess = (current_min + current_max) // 2    # 최솟값 + 최대값 // 2 (/를 두번 씀으로써 나머지 제외) 즉 중간값
+    find_count = 0
 
     while current_min <= current_max:
+        find_count += 1
         if array[current_guess] == target:              # target 이 중간값과 동일하다면
+            print(find_count)           
             return True
         elif array[current_guess] < target:             # 중간값이 target 보다 작다면
             current_min = current_guess + 1             # 최솟값에 중간값 + 1 저장

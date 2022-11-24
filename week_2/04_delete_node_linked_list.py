@@ -11,6 +11,9 @@ class LinkedList:
         self.head = Node(value)
 
     def append(self, value):
+        if self.head is None:          
+            self.head = Node(value)      
+            return
         cur = self.head
         while cur.next is not None:
             cur = cur.next
