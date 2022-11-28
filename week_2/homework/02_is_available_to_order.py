@@ -4,7 +4,7 @@ shop_orders = ["오뎅", "콜라", "만두"]
 
 def is_available_to_order(menus, orders):
     menus_set = set(menus)                              # 집합 자료형
-    for order in orders:                                # 
+    for order in orders:                                 
         if order not in menus_set:                      # order 메뉴가 nenus_set 에 없다면
             return False                                # False
     return True
